@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <img src="../images/photo.jpg" class="img-circle" style="max-width: 14%; ">
+            <a style="color: #ffffff; font-size: 25px">GDG-Goiânia</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a [routerLink]="['/Home']" class="btn">Home</a></li>
+            <li><a [routerLink]="['/PesquisaPalestrante']" class="btn">Pesquisa</a></li>
+            <li><a [routerLink]="['/CadastroPalestrante']" class="btn">Cadastro</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div id="container-fluid">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,45 @@
+<div class="panel panel-info" style="margin: 20px;">
+    <div class="panel-heading">
+        <h3 class="panel-title">Pesquisa de Palestrante</h3>
+    </div>
+    <div class="panel-body">
+        <div *ngFor="var palestrante of palestrantes; #i = index">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Nome: </label>
+                            <h5>{{ palestrante.nome }}</h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>E-Mail: </label>
+                            <h5>{{ palestrante.email }}</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Telefone: </label>
+                            <h5>{{ palestrante.telefone }}</h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Data Nascimento: </label>
+                            <h5>{{ palestrante.nascimento }}</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Assuntos: </label>
+                            <h5>{{ palestrante.assuntos }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button
+            (click)="getPalestrantes()"
+            class="btn btn-primary"
+            type="submit">
+        Atualizar
+    </button>
+</div>

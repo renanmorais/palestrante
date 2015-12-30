@@ -1,0 +1,137 @@
+<div>
+    <div class="panel panel-info" style="margin: 20px">
+        <div class="panel-heading">
+            <h3 class="panel-title">Cadastro de Palestrante</h3>
+        </div>
+        <div class="panel-body">
+            <form>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="InputName">Nome completo</label>
+                        <input
+                                [(ngModel)]="palestrante.nome"
+                                type="text"
+                                class="form-control"
+                                id="InputName"
+                                placeholder="Nome">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="InputEmail">E-Mail</label>
+                        <input
+                                [(ngModel)]="palestrante.email"
+                                type="email"
+                                class="form-control"
+                                id="InputEmail"
+                                placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-3">
+                        <label for="InputNascimento">Data de nascimento</label>
+                        <input
+                                [(ngModel)]="palestrante.nascimento"
+                                type="text"
+                                class="form-control"
+                                id="InputNascimento"
+                                placeholder="Data de nascimento">
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <label for="InputCidade">Cidade</label>
+                        <input
+                                [(ngModel)]="palestrante.cidade"
+                                type="text"
+                                class="form-control"
+                                id="InputCidade"
+                                placeholder="Cidade">
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <label for="InputTelefone">Telefone</label>
+                        <input
+                                [(ngModel)]="palestrante.telefone"
+                                type="text"
+                                class="form-control"
+                                id="InputTelefone"
+                                placeholder="Telefone">
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <label for="InputPalestras">Quantidade de palestras já realizadas</label>
+                        <input
+                                [(ngModel)]="palestrante.qtdpalestras"
+                                type="number"
+                                class="form-control"
+                                id="InputPalestras"
+                                placeholder="Quantidade de palestras">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="alert alert-info" role="alert">Separe os assuntos com ponto e virgula " ; "
+                            <b> Exemplo: AngularJs; Android; Firebase </b></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-12">
+                        <label for="InputAssunto">Assuntos</label>
+                        <textarea
+                                [(ngModel)]="palestrante.assuntos"
+                                class="form-control"
+                                id="InputAssunto"
+                                rows="3">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="InputFacebook">Perfil do facebook</label>
+                        <input
+                                [(ngModel)]="palestrante.facebook"
+                                type="text"
+                                class="form-control"
+                                id="InputFacebook"
+                                placeholder="Link perfil facebook">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="InputGoogle">Perfil do google+</label>
+                        <input
+                                [(ngModel)]="palestrante.googleplus"
+                                type="text"
+                                class="form-control"
+                                id="InputGoogle"
+                                placeholder="Link perfil google+">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="InputTwiter">Perfil do twiter</label>
+                        <input
+                                [(ngModel)]="palestrante.twiter"
+                                type="text"
+                                class="form-control"
+                                id="InputTwiter"
+                                placeholder="Link perfil twiter">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="InputLinkedin">Perfil do linkedin</label>
+                        <input
+                                [(ngModel)]="palestrante.linkedin"
+                                type="text"
+                                class="form-control"
+                                id="InputLinkedin"
+                                placeholder="Link perfil linkedin">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="panel-footer">
+            <button
+                    (click)="salvarPalestrante(palestrante)"
+                    class="btn btn-primary"
+                    type="submit">
+                Salvar
+            </button>
+            <button class="btn btn-warning">Limpar</button>
+
+        </div>
+    </div>
+</div>
